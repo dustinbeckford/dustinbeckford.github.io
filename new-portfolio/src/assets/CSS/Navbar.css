@@ -3,14 +3,21 @@
  *
  * @format
  */
-
+.Navbar-bigbox {
+	padding-bottom: 5rem;
+}
 .navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	display: flex;
 	justify-content: space-between;
-	align-items: center; /* Center items vertically */
-	background-color: #333;
+	align-items: center;
+	background-color: #151019;
 	color: #fff;
 	padding: 10px 20px;
+	z-index: 100; /* Set a higher z-index for the navbar */
 }
 
 /* Logo Link */
@@ -26,7 +33,7 @@
 	list-style: none;
 	display: flex;
 	gap: 20px;
-	align-items: center; /* Center items vertically within the flex container */
+	align-items: center;
 }
 
 .nav-links li {
@@ -41,4 +48,10 @@
 
 .nav-links a:hover {
 	text-decoration: underline;
+}
+
+/* Add position: relative; to the content elements */
+.content {
+	position: relative;
+	/* No need for margin-top */
 }

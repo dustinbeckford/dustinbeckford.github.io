@@ -1,0 +1,17 @@
+/** @format */
+
+#root {
+	background-image: url("../src/assets/images/cool-background.png");
+}
+
+.Welcome-bigbox {
+	padding-bottom: 5rem;
+}
+
+.Intro-Firstname {
+	color: white;
+}
+
+p {
+	color: whitesmoke;
+}
