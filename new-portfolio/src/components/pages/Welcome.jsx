@@ -1,6 +1,6 @@
 /** @format */
 import React from "react";
-import "../../src/welcome.css";
+import "../../../src/Welcome.css";
 
 const Welcome = () => {
 	return (
