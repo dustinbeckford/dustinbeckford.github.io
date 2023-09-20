@@ -3,6 +3,11 @@
  *
  * @format
  */
+
+.navlogo {
+	width: 30px;
+}
+
 .Navbar-bigbox {
 	padding-bottom: 5rem;
 }

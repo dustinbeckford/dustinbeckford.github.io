@@ -3,6 +3,25 @@
 #root {
 	background-image: url("../src/assets/images/cool-background.png");
 }
+.Welcome-Logos {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.Welcome-Logos img {
+	
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+	transition: box-shadow 0.3s ease-in-out; 
+}
+
+.Welcome-Logos img:hover {
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); 
+}
+
+.social-logos {
+	width: 40px;
+}
 
 .Welcome-bigbox {
 	padding-bottom: 5rem;

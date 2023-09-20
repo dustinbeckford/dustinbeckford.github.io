@@ -3,16 +3,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../assets/CSS/Navbar.css";
+import Navlogo from "../assets/logo/8c3486cee545bfba69d20c3459509c51.jpg";
 export const NavBar = () => {
 	return (
 		<section>
 			<div className='Navbar-bigbox'>
 				<nav className='navbar'>
 					<Link to='/'>
-						<img
-							src='../assets/logo/8c3486cee545bfba69d20c3459509c51.jpg'
-							className='logo'
-						/>
+						<img className='navlogo' src={Navlogo} />
 					</Link>
 
 					<ul className='nav-links'>
