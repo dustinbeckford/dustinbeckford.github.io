@@ -1,5 +1,9 @@
 /** @format */
 
+.body {
+	background-color: white;
+}
+
 h1 {
 	color: white;
 }

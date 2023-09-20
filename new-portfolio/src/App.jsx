@@ -12,9 +12,12 @@ function App() {
 	return (
 		<>
 			<NavBar />
-			<Home />
+			<Welcome />
+			<AboutMe />
+			<Projects />
+			<Contact />
 			<Routes>
-				<Route path='/Welcome' element={<Welcome />}></Route>
+				<Route path='/' element={<Welcome />}></Route>
 				<Route path='/About' element={<AboutMe />}></Route>
 				<Route path='/Projects' element={<Projects />}></Route>
 				<Route path='/Contact' element={<Contact />}></Route>

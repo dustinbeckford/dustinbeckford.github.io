@@ -7,10 +7,12 @@ import github from "../../assets/logo/github.png";
 const Welcome = () => {
 	return (
 		<section>
-			<div className='Welcome-bigbox'>
+			<div className='welcome-container'>
 				<div className='Welcome-content'>
 					<span>
-						<div className="Welcome-Logos">
+						<h1>Dustin Beckford</h1>
+						<h2>Full-Stack Web Developer</h2>
+						<div className='Welcome-Logos'>
 							<a
 								href='https://github.com/dustinbeckford'
 								target='_blank'

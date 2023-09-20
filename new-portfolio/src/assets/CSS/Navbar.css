@@ -9,7 +9,7 @@
 }
 
 .Navbar-bigbox {
-	padding-bottom: 5rem;
+	padding-bottom: 2rem;
 }
 .navbar {
 	position: fixed;
@@ -34,6 +34,8 @@
 }
 
 /* Navigation Links */
+/* Navigation Links */
+/* Navigation Links */
 .nav-links {
 	list-style: none;
 	display: flex;
@@ -49,10 +51,12 @@
 	text-decoration: none;
 	color: #fff;
 	font-size: 18px;
+	transition: color 0.3s; /* Add a smooth transition for the color change */
 }
 
 .nav-links a:hover {
 	text-decoration: underline;
+	color: #8a2be2; /* Change the color to purple (#8a2be2) on hover */
 }
 
 /* Add position: relative; to the content elements */
