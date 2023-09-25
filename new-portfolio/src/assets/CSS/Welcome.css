@@ -1,5 +1,6 @@
 /** @format */
-
+.Welcome-Section {
+}
 .welcome-container {
 	background-image: url("../images/cool-background.png"); /* Specify the path to your background image */
 	background-size: cover; /* Cover the entire container with the background image */
@@ -19,7 +20,7 @@
 
 .Welcome-Logos img {
 	box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-	transition: box-shadow 0.3s ease-in-out;
+	transition: filter 0.3s ease 0s;
 }
 
 .Welcome-Logos img:hover {

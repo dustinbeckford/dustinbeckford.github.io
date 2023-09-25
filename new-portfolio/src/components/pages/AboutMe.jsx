@@ -6,8 +6,8 @@ import "../../assets/CSS/About.css";
 const AboutMe = () => {
 	return (
 		<section className='About'>
-			<div>
-				<p>
+			<div className='About-Div'>
+				<p className="About-Paragraph">
 					As someone with a background in delivery logistics, I possess
 					impressive organizational skills, an unwavering attention to detail,
 					and a strong commitment to meeting deadlines. My experience has taught

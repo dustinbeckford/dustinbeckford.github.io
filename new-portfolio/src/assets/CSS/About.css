@@ -1,5 +1,16 @@
 /** @format */
+p {
+	color: black;
+}
 
-body {
-	background-color: #151019;
+.About-Div {
+	background-color: rgba(red, green, blue, alpha);
+}
+
+.About-Paragraph {
+	font-family: Arial, sans-serif; /* Choose a suitable font-family */
+	font-size: 16px; /* Set the font size */
+	line-height: 1.5; /* Adjust line height for readability */
+	color: #333; /* Set the text color */
+	margin: 20px 0; /* Add margin for spacing */
 }

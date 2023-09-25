@@ -6,7 +6,7 @@ import github from "../../assets/logo/github.png";
 
 const Welcome = () => {
 	return (
-		<section>
+		<section className="Welcome-Section">
 			<div className='welcome-container'>
 				<div className='Welcome-content'>
 					<span>

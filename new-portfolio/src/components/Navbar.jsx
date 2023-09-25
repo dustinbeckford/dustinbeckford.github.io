@@ -2,29 +2,39 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import "../assets/CSS/Navbar.css";
+import { Link as ScrollLink } from "react-scroll";
 import Navlogo from "../assets/logo/8c3486cee545bfba69d20c3459509c51.jpg";
+import "../assets/CSS/Navbar.css";
+
 export const NavBar = () => {
 	return (
 		<section>
 			<div className='Navbar-bigbox'>
 				<nav className='navbar'>
 					<Link to='/'>
-						<img className='navlogo' src={Navlogo} />
+						<img className='navlogo' src={Navlogo} alt='Logo' />
 					</Link>
 
 					<ul className='nav-links'>
 						<li>
-							<Link to='/Welcome'>Welcome</Link>
+							<ScrollLink to='Welcome' smooth={true} duration={500}>
+								Welcome
+							</ScrollLink>
 						</li>
 						<li>
-							<Link to='/About'>About</Link>
+							<ScrollLink to='About' smooth={true} duration={500}>
+								About
+							</ScrollLink>
 						</li>
 						<li>
-							<Link to='/Projects'>Projects</Link>
+							<ScrollLink to='Projects' smooth={true} duration={500}>
+								Projects
+							</ScrollLink>
 						</li>
 						<li>
-							<Link to='/Contact'>Contact</Link>
+							<ScrollLink to='Contact' smooth={true} duration={500}>
+								Contact
+							</ScrollLink>
 						</li>
 					</ul>
 				</nav>

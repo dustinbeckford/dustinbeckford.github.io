@@ -1,15 +1,21 @@
-/**
- * Navbar Container
- *
- * @format
- */
+/** @format */
 
 .navlogo {
 	width: 30px;
 }
 
 .Navbar-bigbox {
-	padding-bottom: 2rem;
+	position: fixed; /* Ensure the navigation bar stays fixed at the top */
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.7
+	); /* Add a background color with transparency */
+	z-index: 1000; /* Set a higher z-index value to ensure it appears above the background */
 }
 .navbar {
 	position: fixed;
@@ -22,10 +28,9 @@
 	background-color: #151019;
 	color: #fff;
 	padding: 10px 20px;
-	z-index: 100; /* Set a higher z-index for the navbar */
+	z-index: 100;
 }
 
-/* Logo Link */
 .logo {
 	text-decoration: none;
 	font-size: 24px;
@@ -33,9 +38,6 @@
 	color: #fff;
 }
 
-/* Navigation Links */
-/* Navigation Links */
-/* Navigation Links */
 .nav-links {
 	list-style: none;
 	display: flex;
@@ -51,16 +53,14 @@
 	text-decoration: none;
 	color: #fff;
 	font-size: 18px;
-	transition: color 0.3s; /* Add a smooth transition for the color change */
+	transition: color 0.3s;
 }
 
 .nav-links a:hover {
 	text-decoration: underline;
-	color: #8a2be2; /* Change the color to purple (#8a2be2) on hover */
+	color: #8a2be2;
 }
 
-/* Add position: relative; to the content elements */
 .content {
 	position: relative;
-	/* No need for margin-top */
 }

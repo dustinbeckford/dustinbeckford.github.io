@@ -8,16 +8,17 @@ import { Projects } from "./components/pages/Projects";
 import { Contact } from "./components/pages/Contact";
 import AboutMe from "./components/pages/AboutMe";
 import Home from "./components/pages/Home";
+import Skills from "./components/pages/Skills";
 function App() {
 	return (
 		<>
 			<NavBar />
 			<Welcome />
 			<AboutMe />
+			<Skills />
 			<Projects />
 			<Contact />
 			<Routes>
-				<Route path='/' element={<Welcome />}></Route>
 				<Route path='/About' element={<AboutMe />}></Route>
 				<Route path='/Projects' element={<Projects />}></Route>
 				<Route path='/Contact' element={<Contact />}></Route>
