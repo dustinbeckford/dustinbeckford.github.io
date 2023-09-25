@@ -1,7 +1,8 @@
 /** @format */
 
 :root {
-	color: black;
+	color: white;
+	background-color: #151019;
 }
 * {
 	box-sizing: border-box;

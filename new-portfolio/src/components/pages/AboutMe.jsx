@@ -7,7 +7,8 @@ const AboutMe = () => {
 	return (
 		<section className='About'>
 			<div className='About-Div'>
-				<p className="About-Paragraph">
+				<h1> About Me</h1>
+				<p className='About-Paragraph'>
 					As someone with a background in delivery logistics, I possess
 					impressive organizational skills, an unwavering attention to detail,
 					and a strong commitment to meeting deadlines. My experience has taught

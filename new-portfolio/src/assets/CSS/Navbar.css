@@ -5,17 +5,8 @@
 }
 
 .Navbar-bigbox {
-	position: fixed; /* Ensure the navigation bar stays fixed at the top */
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: rgba(
-		0,
-		0,
-		0,
-		0.7
-	); /* Add a background color with transparency */
-	z-index: 1000; /* Set a higher z-index value to ensure it appears above the background */
+	padding-bottom: 1.4rem;
+	z-index: 1000;
 }
 .navbar {
 	position: fixed;

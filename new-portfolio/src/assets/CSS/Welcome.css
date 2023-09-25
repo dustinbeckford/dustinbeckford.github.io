@@ -11,6 +11,7 @@
 	justify-content: center;
 	align-items: center;
 	color: #fff; /* Text color on top of the background */
+	width: auto;
 }
 .Welcome-Logos {
 	display: flex;
