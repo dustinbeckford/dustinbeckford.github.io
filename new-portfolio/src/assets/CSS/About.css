@@ -1,5 +1,10 @@
 /** @format */
-p {
+
+.About {
+	background-color: white;
+}
+.About-me,
+.About p {
 	color: black;
 }
 

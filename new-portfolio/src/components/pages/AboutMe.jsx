@@ -7,7 +7,7 @@ const AboutMe = () => {
 	return (
 		<section className='About'>
 			<div className='About-Div'>
-				<h1> About Me</h1>
+				<span className='About-me'>About Me</span>
 				<p className='About-Paragraph'>
 					As someone with a background in delivery logistics, I possess
 					impressive organizational skills, an unwavering attention to detail,
