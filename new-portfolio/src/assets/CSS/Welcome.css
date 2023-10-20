@@ -1,6 +1,11 @@
 /** @format */
 .Welcome-Section {
 }
+
+.Welcome-content {
+	display: grid;
+	justify-content: center;
+}
 .welcome-container {
 	background-image: url("../images/cool-background.png"); /* Specify the path to your background image */
 	background-size: cover; /* Cover the entire container with the background image */
@@ -17,6 +22,44 @@
 	display: flex;
 	align-items: center;
 	gap: 10px;
+}
+.Welcome {
+	display: inline-flex;
+	flex-direction: column;
+	font-size: clamp(
+		1.5rem,
+		0.285rem + 10.16vw,
+		3rem
+	); /* Adjusted font size for Welcome */
+	word-spacing: 1px;
+	background: linear-gradient(to right, black, white);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: colorShift 5s linear infinite;
+}
+
+.Description {
+	display: inline-flex;
+	flex-direction: column;
+	font-size: clamp(2.19rem, 0.285rem + 10.16vw, 5rem);
+	word-spacing: 1px;
+	background: linear-gradient(to right, black, white);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: colorShift 5s linear infinite;
+	margin-top: 20px; /* Adjusted margin-top for spacing between h1 and h2 */
+}
+
+@keyframes colorShift {
+	0% {
+		background-position: 0%;
+	}
+	50% {
+		background-position: 50%;
+	}
+	100% {
+		background-position: 100%;
+	}
 }
 
 .Welcome-Logos img {

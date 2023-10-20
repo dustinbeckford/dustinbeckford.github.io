@@ -4,11 +4,12 @@ import { useState } from "react";
 import "./App.css";
 import { NavBar } from "./components/NavBar";
 import Welcome from "./components/pages/Welcome";
-import { Projects } from "./components/pages/Projects";
+import Projects from "./components/pages/Projects";
 import { Contact } from "./components/pages/Contact";
 import AboutMe from "./components/pages/AboutMe";
 import Home from "./components/pages/Home";
 import Skills from "./components/pages/Skills";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function App() {
 	return (
 		<>

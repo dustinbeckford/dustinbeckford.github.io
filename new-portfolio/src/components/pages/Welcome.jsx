@@ -6,27 +6,27 @@ import github from "../../assets/logo/github.png";
 
 const Welcome = () => {
 	return (
-		<section className="Welcome-Section">
+		<section className='Welcome-Section'>
 			<div className='welcome-container'>
 				<div className='Welcome-content'>
-					<span>
-						<h1>Dustin Beckford</h1>
-						<h2>Full-Stack Web Developer</h2>
-						<div className='Welcome-Logos'>
-							<a
-								href='https://github.com/dustinbeckford'
-								target='_blank'
-								rel='noopener noreferrer'>
-								<img className='social-logos' src={github} alt='GitHub' />
-							</a>
-							<a
-								href='https://www.linkedin.com/in/dustin-beckford-67021213a/'
-								target='_blank'
-								rel='noopener noreferrer'>
-								<img className='social-logos' src={Linkedin} alt='LinkedIn' />
-							</a>
-						</div>
+					<span class='Welcome-content'>
+						<h1 className='Welcome'>Dustin Beckford</h1>
+						<h2 className='Description'>Full-Stack Web Developer</h2>
 					</span>
+					<div className='Welcome-Logos'>
+						<a
+							href='https://github.com/dustinbeckford'
+							target='_blank'
+							rel='noopener noreferrer'>
+							<img className='social-logos' src={github} alt='GitHub' />
+						</a>
+						<a
+							href='https://www.linkedin.com/in/dustin-beckford-67021213a/'
+							target='_blank'
+							rel='noopener noreferrer'>
+							<img className='social-logos' src={Linkedin} alt='LinkedIn' />
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
