@@ -2,7 +2,9 @@
 
 import React, { useState } from "react";
 import "../../assets/CSS/Projects.css";
-import 
+import CarSearch from "../../assets/images/CarSearch.png";
+import GamerNet from "../../assets/images/GameNet.png";
+import CarEvent from "../../assets/images/CarEvent.png";
 
 const Projects = () => {
 	const projectsData = [
@@ -16,14 +18,14 @@ const Projects = () => {
 		{
 			name: "Event Hosting",
 			description: "Description of the Event Hosting project.",
-			link: "https://eventhosting.com",
-			image: "event_image.jpg", // Replace with the actual path to your image
+			link: "https://github.com/dustinbeckford/backend-project-2",
+			image: <img src={CarEvent} />,
 		},
 		{
 			name: "E-Sports Website",
 			description: "Description of the E-Sports Website project.",
-			link: "https://esportswebsite.com",
-			image: "esports_image.jpg", // Replace with the actual path to your image
+			link: "https://github.com/August-2023-Capstone/Capstone/tree/main",
+			image: <img src={GamerNet} />,
 		},
 	];
 
