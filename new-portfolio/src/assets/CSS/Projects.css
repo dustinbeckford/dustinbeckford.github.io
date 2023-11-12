@@ -1,14 +1,32 @@
-/**
- * Projects.css
- *
- * @format
- */
+/** @format */
 
 .projects-container {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	padding: 20px;
+}
+
+.projects-wrapper {
+	display: flex;
+	justify-content: space-around;
+	/* Add any other styles for the projects wrapper */
+}
+
+.project-card {
+	/* Add any styles for the project cards */
+}
+
+.project-image {
+	width: 100%; /* Ensure the image takes 100% of its container width */
+	height: 100%; /* Ensure the image takes 100% of its container height */
+	overflow: hidden; /* Hide any overflow if the image exceeds its container size */
+}
+
+.project-image img {
+	width: 100%; /* Make sure the image takes 100% of the image container's width */
+	height: 100%; /* Make sure the image takes 100% of the image container's height */
+	object-fit: cover; /* Preserve the aspect ratio while covering the entire container */
 }
 
 .project-card {

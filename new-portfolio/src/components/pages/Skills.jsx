@@ -13,6 +13,8 @@ import npm from "../../assets/logo/npm.png";
 function Skills() {
 	return (
 		<div className='skills-container'>
+			<h1>Skills</h1>
+
 			<div className='logo-container'>
 				<img src={react} alt='React Logo' className='logo-image' />
 			</div>
