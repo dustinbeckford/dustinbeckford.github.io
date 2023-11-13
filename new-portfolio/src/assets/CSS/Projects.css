@@ -134,6 +134,12 @@
 	}
 }
 
-.Fade-in-Projects {
-	animation: fadeIn 1s ease-out;
+.Projects {
+	font-size: 2rem;
+	color: #a19e9e;
+	margin-bottom: 20px;
+	display: inline-block;
+	border-bottom: 2px solid #87c8ff;
+	padding-bottom: 10px;
+	text-align: center; /* Add this line to center the text */
 }

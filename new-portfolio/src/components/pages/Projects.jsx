@@ -40,8 +40,8 @@ const Projects = () => {
 	};
 
 	return (
-		<span className='Fade-in-Projects'>
-			Projects
+		<div>
+			<span className='Projects'>Projects</span>
 			<div className='projects-container'>
 				<div className='projects-wrapper'>
 					{projectsData.map((project, index) => (
@@ -68,7 +68,7 @@ const Projects = () => {
 					</div>
 				)}
 			</div>
-		</span>
+		</div>
 	);
 };
 

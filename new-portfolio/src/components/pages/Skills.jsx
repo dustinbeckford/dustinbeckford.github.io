@@ -16,8 +16,7 @@ import sql from "../../assets/logo/sql.png";
 function Skills() {
 	return (
 		<div className='skills-container'>
-			<h1>Skills</h1>
-
+			<span className='skills'>Skills</span>
 			<div className='logo-container'>
 				<img src={react} alt='React Logo' className='logo-image' />
 			</div>
@@ -25,7 +24,7 @@ function Skills() {
 				<img src={Javascript} alt='JavaScript Logo' className='logo-image' />
 			</div>
 			<div className='logo-container'>
-				<img src={css} alt='css Logo' className='logo-image' />
+				<img src={css} alt='CSS Logo' className='logo-image' />
 			</div>
 			<div className='logo-container'>
 				<img src={html} alt='html Logo' className='logo-image' />

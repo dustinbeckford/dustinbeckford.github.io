@@ -38,3 +38,12 @@
 	text-align: center;
 	width: 100%;
 }
+
+.skills {
+	font-size: 2rem;
+	color: #a19e9e; /* Dark text color */
+	margin-bottom: 20px;
+	display: block;
+	border-bottom: 2px solid #87c8ff; /* Blue border under the heading */
+	padding-bottom: 10px;
+}
