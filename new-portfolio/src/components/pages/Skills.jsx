@@ -12,6 +12,7 @@ import npm from "../../assets/logo/npm.png";
 import bootstrap from "../../assets/logo/bootstrap.png";
 import supabase from "../../assets/logo/supabase.png";
 import tailwind from "../../assets/logo/tailwind-css.png";
+import sql from "../../assets/logo/sql.png";
 function Skills() {
 	return (
 		<div className='skills-container'>
@@ -46,6 +47,9 @@ function Skills() {
 			</div>
 			<div className='logo-container'>
 				<img src={supabase} alt='supabase Logo' className='logo-image' />
+			</div>
+			<div className='logo-container'>
+				<img src={sql} alt='sql Logo' className='logo-image' />
 			</div>
 		</div>
 	);

@@ -17,13 +17,15 @@ const Projects = () => {
 		},
 		{
 			name: "Event Hosting",
-			description: "Description of the Event Hosting project.",
+			description:
+				"The CarEvent App is an application designed to simplify the process of hosting and managing car events. It provides a user-friendly interface and comprehensive features for event organizers to track participants, their cars, event details, and sponsorships.",
 			link: "https://github.com/dustinbeckford/backend-project-2",
 			image: CarEventImage,
 		},
 		{
 			name: "E-Sports Website",
-			description: "Description of the E-Sports Website project.",
+			description:
+				"For our Capstone final project we chose to create a gaming social application utilizing our full-stack web development skills in an agile fashion in two weeks' time. This application is designed to provide gamers with a platform to connect, communicate, and game together. Whether you're looking for new friends to play with, organizing gaming sessions, or simply chatting about your favorite games, our app has you covered.",
 			link: "https://github.com/August-2023-Capstone/Capstone/tree/main",
 			image: GamerNetImage,
 		},
