@@ -21,7 +21,7 @@
 .Welcome-Logos {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 16px;
 }
 .Welcome {
 	display: inline-flex;
@@ -36,6 +36,12 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	animation: colorShift 5s linear infinite;
+}
+
+.Welcome-content h1 {
+	font-size: 3rem; /* Adjust the font size as needed */
+	color: #7e7a7a; /* Set the text color to a dark shade */
+	margin-bottom: 10px; /* Add some space below the heading */
 }
 
 .Description {

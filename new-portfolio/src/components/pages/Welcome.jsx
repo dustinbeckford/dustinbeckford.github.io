@@ -9,8 +9,8 @@ const Welcome = () => {
 		<section className='Welcome-Section'>
 			<div className='welcome-container'>
 				<div className='Welcome-content'>
+					<h1> Dustin Beckford</h1>
 					<span class='Welcome-content'>
-						<h1 className='Welcome'>Dustin Beckford</h1>
 						<h2 className='Description'>Full-Stack Web Developer</h2>
 					</span>
 					<div className='Welcome-Logos'>
