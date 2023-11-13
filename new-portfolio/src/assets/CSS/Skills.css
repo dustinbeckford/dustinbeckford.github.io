@@ -1,30 +1,24 @@
-/**
- * Skills.css
- *
- * @format
- */
+/** @format */
 
 .skills-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 20px;
-	flex-wrap: nowrap; /* Set flex-wrap to nowrap to keep the logos in a single row */
+	flex-wrap: wrap; /* Allow logos to wrap to the next line on smaller screens */
 }
 
 .logo-container {
-	flex: 0 0 100px; /* Adjust as needed */
+	flex: 0 0 100px;
 	margin: 10px;
 	overflow: hidden;
 }
 
-.logo-container:hover {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
 .logo-image {
-	width: 100%;
-	height: 100%;
+	width: 100%; /* Set the width to 100% to make the image responsive */
+	height: auto; /* Maintain the aspect ratio */
+	max-width: 100px; /* Limit the maximum width of the image */
+	max-height: 100px; /* Limit the maximum height of the image */
 	object-fit: cover;
 	filter: grayscale(100%);
 	transition: filter 0.3s ease-in-out;
@@ -54,7 +48,7 @@
 @media only screen and (max-width: 768px) {
 	/* Adjust styles for smaller screens here */
 	.logo-container {
-		flex: 0 0 50%; /* Adjust the width of the logo container for smaller screens */
+		flex: 0 0 50%;
 	}
 
 	.skills {
