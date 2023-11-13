@@ -16,6 +16,8 @@ import sql from "../../assets/logo/sql.png";
 import firebase from "../../assets/logo/firebase.png";
 import postman from "../../assets/logo/postman.png";
 import postgres from "../../assets/logo/postgres.png";
+import Redux from "../../assets/logo/redux.png";
+
 function Skills() {
 	return (
 		<div>
@@ -28,6 +30,10 @@ function Skills() {
 				<div className='logo-container'>
 					<img src={Javascript} alt='JavaScript Logo' className='logo-image' />
 					<h4>Java Script</h4>
+				</div>
+				<div className='logo-container'>
+					<img src={Redux} alt='REDUX Logo' className='logo-image' />
+					<h4>REDUX</h4>
 				</div>
 				<div className='logo-container'>
 					<img src={css} alt='CSS Logo' className='logo-image' />
