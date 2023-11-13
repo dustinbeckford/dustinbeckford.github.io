@@ -2,12 +2,14 @@
 
 import React from "react";
 import "../../assets/CSS/About.css";
+import mehah from "../../assets/images/me.jpeg";
 
 const AboutMe = () => {
 	return (
 		<section className='About'>
 			<div className='About-Div'>
 				<span className='About-me'>About Me</span>
+				<img className='About-Portrait' src={mehah} alt='Portrait' />
 				<p className='About-Paragraph'>
 					As someone with a background in delivery logistics, I possess
 					impressive organizational skills, an unwavering attention to detail,
