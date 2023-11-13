@@ -28,7 +28,7 @@ export const Contact = () => {
 
 	return (
 		<div>
-			<h2>Contact Us</h2>
+			<h2>Contact Me</h2>
 			<div className='contact-container'>
 				<form onSubmit={handleSubmit} className='contact-form'>
 					<label htmlFor='name'>Name:</label>
