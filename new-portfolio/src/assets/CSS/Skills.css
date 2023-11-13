@@ -48,3 +48,16 @@
 	padding-bottom: 10px;
 	text-align: center;
 }
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+	/* Adjust styles for smaller screens here */
+	.logo-container {
+		flex: 0 0 50%; /* Adjust the width of the logo container for smaller screens */
+	}
+
+	.skills {
+		font-size: 1.5rem;
+	}
+}

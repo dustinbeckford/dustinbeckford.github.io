@@ -92,38 +92,51 @@
 }
 
 .modal-content {
-	background: #fff;
+	background: #fffbfbb4;
 	padding: 20px;
-	border-radius: 5px;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	max-width: 500px;
+	width: 100%;
 }
 
 .modal-content h2 {
 	margin-bottom: 10px;
-	color: black;
-	font-size: 2rem;
+	color: #333; /* Dark text color */
+	font-size: 1.8rem;
 }
 
 .modal-content p {
-	margin-bottom: 10px;
-	font-size: 1.2rem;
-	color: black;
+	margin-bottom: 15px;
+	font-size: 0.9rem;
+	color: #555; /* Medium gray text color */
 }
 
 .modal-content a {
-	display: block;
-	margin-bottom: 10px;
-	color: black;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+	color: #0579f5; /* Link color */
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.modal-content a:hover {
+	color: #0056b3; /* Hovered link color */
 }
 
 .modal-content button {
-	padding: 8px 12px;
-	background-color: purple;
+	padding: 10px 15px;
+	background-color: #8a2be2; /* Purple color */
 	color: #fff;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	display: inline-block;
-	margin-right: 10px;
+	transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+	background-color: #6a1e9b; /* Darker purple on hover */
 }
 
 @keyframes fadeIn {
@@ -143,4 +156,25 @@
 	border-bottom: 2px solid #87c8ff;
 	padding-bottom: 10px;
 	text-align: center; /* Add this line to center the text */
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+	.projects-container {
+		padding: 10px; /* Adjust padding for smaller screens */
+	}
+
+	.project-card {
+		flex: 0 0 100%; /* Make the project cards take full width on smaller screens */
+		margin: 10px 0;
+	}
+
+	.project-image {
+		height: 150px; /* Adjust the height of project images for smaller screens */
+	}
+
+	.Projects {
+		font-size: 1.5rem; /* Adjust the font size for the Projects heading on smaller screens */
+	}
 }

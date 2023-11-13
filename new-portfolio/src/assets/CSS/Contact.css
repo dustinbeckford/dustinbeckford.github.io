@@ -1,0 +1,65 @@
+/** @format */
+
+.contact-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	flex-wrap: nowrap; /* Set flex-wrap to nowrap to keep the form in a single column */
+}
+
+.contact-form {
+	width: 100%;
+	max-width: 400px; /* Adjust the max-width as needed */
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	color: #a19e9e; /* Same color as used in Skills.css */
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 15px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+button {
+	background-color: #007bff; /* Same color as used in Skills.css */
+	color: #fff;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+h2 {
+	font-size: 2rem;
+	color: #a19e9e; /* Same color as used in Skills.css */
+	margin-bottom: 20px;
+	display: inline-block;
+	border-bottom: 2px solid #87c8ff; /* Same border color as used in Skills.css */
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+	/* Adjust styles for smaller screens here */
+	.contact-form {
+		max-width: 100%; /* Full width for smaller screens */
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+}

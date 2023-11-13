@@ -6,7 +6,7 @@
 
 .About {
 	background-color: #adaeaf27; /* Light gray background color */
-	padding: 50px 0; /* Adjust padding as needed */
+	padding: 50px 20px; /* Adjust padding for smaller screens */
 }
 
 .About-Div {
@@ -32,7 +32,7 @@
 
 .About-Portrait {
 	border-radius: 50%; /* Make the image circular */
-	max-width: 30%;
+	max-width: 100%; /* Ensure the image takes up the full width on smaller screens */
 	height: auto;
 	margin: 20px 0;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
@@ -40,4 +40,15 @@
 
 .its-me {
 	color: #a19e9e;
+}
+
+/* Add a media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+	.About {
+		padding: 30px 20px; /* Adjust padding for smaller screens */
+	}
+
+	.About-Portrait {
+		max-width: 80%; /* Adjust image width for smaller screens */
+	}
 }
