@@ -10,15 +10,17 @@
 }
 
 .logo-container {
-	flex: 0 0 150px; /* Adjust as needed */
-	margin: 20px;
-	border: 1px solid #ffffff;
-	border-radius: 5px;
+	position: relative;
+	width: 150px; /* Set the desired width of your square box */
+	height: 150px; /* Set the desired height of your square box */
 	overflow: hidden;
+	transition: transform 0.3s ease-in-out;
 }
 
 .logo-container:hover {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transform: scale(
+		1.1
+	); /* Increase the scale on hover for a highlighting effect */
 }
 
 .logo-image {
