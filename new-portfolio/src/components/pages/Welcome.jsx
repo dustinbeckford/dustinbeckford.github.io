@@ -9,7 +9,7 @@ const Welcome = () => {
 		<section className='Welcome-Section'>
 			<div className='welcome-container'>
 				<div className='Welcome-content'>
-					<h1> Dustin Beckford</h1>
+					<h1> Dustin</h1>
 					<span class='Welcome-content'>
 						<h2 className='Description'>Full-Stack Web Developer</h2>
 					</span>
