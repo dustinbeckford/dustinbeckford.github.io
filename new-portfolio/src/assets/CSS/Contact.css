@@ -43,10 +43,10 @@ button:hover {
 
 h2 {
 	font-size: 2rem;
-	color: #a19e9e; /* Same color as used in Skills.css */
+	color: #a19e9e;
 	margin-bottom: 20px;
 	display: inline-block;
-	border-bottom: 2px solid #87c8ff; /* Same border color as used in Skills.css */
+	border-bottom: 2px solid #87c8ff;
 	padding-bottom: 10px;
 	text-align: center;
 }
