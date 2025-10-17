@@ -2,7 +2,7 @@
 import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./App.css";
-import { NavBar } from "./components/NavBar";
+import { NavBar } from "./components/Navbar";
 import Welcome from "./components/pages/Welcome";
 import Projects from "./components/pages/Projects";
 import { Contact } from "./components/pages/Contact";
