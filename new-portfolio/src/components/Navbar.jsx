@@ -25,33 +25,48 @@ export const NavBar = () => {
 						<img className='navlogo' src={Navlogo} alt='Logo' />
 					</Link>
 
-					<div 
-						className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
-						onClick={toggleMobileMenu}
-					>
+					<div
+						className={`mobile-menu-toggle ${isMobileMenuOpen ? "active" : ""}`}
+						onClick={toggleMobileMenu}>
 						<span></span>
 						<span></span>
 						<span></span>
 					</div>
 
-					<ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+					<ul className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}>
 						<li>
-							<ScrollLink to='Welcome' smooth={true} duration={500} onClick={closeMobileMenu}>
+							<ScrollLink
+								to='Welcome'
+								smooth={true}
+								duration={500}
+								onClick={closeMobileMenu}>
 								Welcome
 							</ScrollLink>
 						</li>
 						<li>
-							<ScrollLink to='About' smooth={true} duration={500} onClick={closeMobileMenu}>
+							<ScrollLink
+								to='About'
+								smooth={true}
+								duration={500}
+								onClick={closeMobileMenu}>
 								About
 							</ScrollLink>
 						</li>
 						<li>
-							<ScrollLink to='Projects' smooth={true} duration={500} onClick={closeMobileMenu}>
+							<ScrollLink
+								to='Projects'
+								smooth={true}
+								duration={500}
+								onClick={closeMobileMenu}>
 								Projects
 							</ScrollLink>
 						</li>
 						<li>
-							<ScrollLink to='Contact' smooth={true} duration={500} onClick={closeMobileMenu}>
+							<ScrollLink
+								to='Contact'
+								smooth={true}
+								duration={500}
+								onClick={closeMobileMenu}>
 								Contact
 							</ScrollLink>
 						</li>
