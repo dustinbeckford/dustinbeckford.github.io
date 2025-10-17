@@ -14,7 +14,7 @@ const AboutMe = () => {
 				<p className='About-Paragraph'>
 					I'm a passionate Full-Stack Developer who loves creating seamless digital experiences. 
 					With expertise in both backend systems and frontend interfaces, I bring ideas to life 
-					through clean code and intuitive design.
+					through clean code and intuitive design..
 				</p>
 				<div className='About-Highlights fade-in-stagger'>
 					<div className='highlight-item'>
