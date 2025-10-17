@@ -2,19 +2,18 @@
   <!-- Background -->
   <rect width="64" height="64" rx="8" fill="#000000"/>
   
-  <!-- Geometric Cursor logo - inspired by the 3D cube design -->
-  <!-- Top triangle -->
+  <!-- Top triangle (bright white) -->
   <path d="M32 16L44 24L32 32L20 24L32 16Z" fill="#FFFFFF"/>
   
-  <!-- Left side facet -->
+  <!-- Left side facet (medium gray) -->
   <path d="M20 24L32 32L32 40L20 32L20 24Z" fill="#CCCCCC"/>
   
-  <!-- Right side facet -->
+  <!-- Right side facet (lighter gray) -->
   <path d="M32 32L44 24L44 32L32 40L32 32Z" fill="#999999"/>
   
-  <!-- Bottom section -->
+  <!-- Bottom section (dark gray) -->
   <path d="M20 32L32 40L44 32L32 24L20 32Z" fill="#666666"/>
   
-  <!-- Inner highlight -->
+  <!-- Inner highlight (bright white) -->
   <path d="M28 20L36 24L28 28L20 24L28 20Z" fill="#F0F0F0"/>
 </svg>
