@@ -25,13 +25,14 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background: rgba(0, 0, 0, 0.8);
-	backdrop-filter: var(--backdrop-blur);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	background: rgba(0, 0, 0, 0.85);
+	backdrop-filter: var(--backdrop-blur-lg);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 	color: var(--text-primary);
-	padding: var(--space-md) var(--space-xl);
+	padding: var(--space-lg) var(--space-xl);
 	z-index: 100;
 	transition: all var(--transition-normal);
+	box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
 }
 
 .navbar::before {
@@ -58,7 +59,8 @@
 
 .logo:hover {
 	color: var(--accent-blue);
-	transform: translateY(-1px);
+	transform: translateY(-2px);
+	text-shadow: 0 0 10px rgba(135, 200, 255, 0.3);
 }
 
 .nav-links {
@@ -98,8 +100,9 @@
 
 .nav-links a:hover {
 	color: var(--text-primary);
-	background: rgba(135, 200, 255, 0.1);
-	transform: translateY(-1px);
+	background: rgba(135, 200, 255, 0.08);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(135, 200, 255, 0.15);
 }
 
 .nav-links a:hover::before {

@@ -23,6 +23,7 @@
 	--space-xl: 2rem;      /* 32px */
 	--space-2xl: 3rem;     /* 48px */
 	--space-3xl: 4rem;     /* 64px */
+	--space-4xl: 5rem;    /* 80px */
 	
 	/* Typography */
 	--font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', Roboto, sans-serif;
@@ -36,21 +37,27 @@
 	--shadow-glow: 0 0 20px rgba(135, 200, 255, 0.3);
 	--shadow-glow-purple: 0 0 20px rgba(138, 43, 226, 0.3);
 	
-	/* Transitions */
-	--transition-fast: 0.15s ease-out;
-	--transition-normal: 0.3s ease-out;
-	--transition-slow: 0.5s ease-out;
+	/* Transitions - Apple-like cubic-bezier timing */
+	--transition-fast: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	--transition-normal: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	--transition-slow: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	
 	/* Border Radius */
 	--radius-sm: 0.375rem;
 	--radius-md: 0.5rem;
 	--radius-lg: 0.75rem;
 	--radius-xl: 1rem;
+	--radius-2xl: 1.5rem;
 	--radius-full: 9999px;
 	
-	/* Backdrop Blur */
+	/* Backdrop Blur - Enhanced glassmorphism */
 	--backdrop-blur: blur(20px);
 	--backdrop-blur-sm: blur(10px);
+	--backdrop-blur-lg: blur(30px);
+	
+	/* Enhanced Shadows */
+	--shadow-glow-hover: 0 0 30px rgba(135, 200, 255, 0.4);
+	--shadow-glow-purple-hover: 0 0 30px rgba(138, 43, 226, 0.4);
 }
 
 * {
@@ -124,17 +131,36 @@ p {
 	transition: all var(--transition-normal);
 }
 
-/* Scroll-triggered animations */
-.scroll-animate {
+/* Fade-in animations for components */
+.fade-in {
 	opacity: 0;
-	transform: translateY(50px);
+	transform: translateY(30px);
 	transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.scroll-animate.animate-in {
+.fade-in.visible {
 	opacity: 1;
 	transform: translateY(0);
 }
+
+/* Staggered animations for child elements */
+.fade-in-stagger > * {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-stagger.visible > * {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.fade-in-stagger > *:nth-child(1) { transition-delay: 0.1s; }
+.fade-in-stagger > *:nth-child(2) { transition-delay: 0.2s; }
+.fade-in-stagger > *:nth-child(3) { transition-delay: 0.3s; }
+.fade-in-stagger > *:nth-child(4) { transition-delay: 0.4s; }
+.fade-in-stagger > *:nth-child(5) { transition-delay: 0.5s; }
+.fade-in-stagger > *:nth-child(6) { transition-delay: 0.6s; }
 
 .scroll-animate-delay-1 {
 	transition-delay: 0.1s;
@@ -211,3 +237,4 @@ p {
 	opacity: 1;
 	transform: translateY(0) scale(1);
 }
+

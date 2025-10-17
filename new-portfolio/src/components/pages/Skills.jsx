@@ -161,9 +161,9 @@ function Skills() {
 		setSelectedSkill(null);
 	};
 	return (
-		<div>
+		<div className='fade-in'>
 			<span className='skills'>Skills</span>
-			<div className='skills-container'>
+			<div className='skills-container fade-in-stagger'>
 				{skillsData.map((skill, index) => (
 					<div 
 						key={index}

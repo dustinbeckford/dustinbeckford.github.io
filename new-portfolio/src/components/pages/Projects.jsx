@@ -43,10 +43,10 @@ const Projects = () => {
 	};
 
 	return (
-		<div>
+		<div className='fade-in'>
 			<span className='Projects'>Projects</span>
 			<div className='projects-container'>
-				<div className='projects-wrapper'>
+				<div className='projects-wrapper fade-in-stagger'>
 					{projectsData.map((project, index) => (
 						<div
 							key={index}

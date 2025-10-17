@@ -6,9 +6,9 @@ import github from "../../assets/logo/github.png";
 
 const Welcome = () => {
 	return (
-		<section className='Welcome-Section'>
+		<section className='Welcome-Section fade-in'>
 			<div className='welcome-container'>
-				<div className='Welcome-content'>
+				<div className='Welcome-content fade-in-stagger'>
 					<h1> Dustin</h1>
 					<span class='Welcome-content'>
 						<h2 className='Description'>Full-Stack Web Developer</h2>

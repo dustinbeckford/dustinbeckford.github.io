@@ -31,10 +31,10 @@
 }
 
 .project-card {
-	background: rgba(28, 28, 30, 0.6);
-	backdrop-filter: var(--backdrop-blur-sm);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border-radius: var(--radius-lg);
+	background: rgba(28, 28, 30, 0.7);
+	backdrop-filter: var(--backdrop-blur);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: var(--radius-xl);
 	overflow: hidden;
 	transition: all var(--transition-normal);
 	position: relative;
@@ -42,6 +42,7 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project-card::before {
@@ -57,12 +58,10 @@
 }
 
 .project-card:hover {
-	transform: translateY(-8px) scale(1.02);
-	background: rgba(28, 28, 30, 0.8);
+	transform: translateY(-12px) scale(1.03);
+	background: rgba(135, 200, 255, 0.08);
 	border-color: var(--accent-blue);
-	box-shadow: 
-		var(--shadow-xl),
-		0 0 30px rgba(135, 200, 255, 0.2);
+	box-shadow: var(--shadow-glow-hover);
 }
 
 .project-card:hover::before {
@@ -117,11 +116,11 @@
 
 .modal-content {
 	background: rgba(28, 28, 30, 0.95);
-	backdrop-filter: var(--backdrop-blur);
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	backdrop-filter: var(--backdrop-blur-lg);
+	border: 1px solid rgba(255, 255, 255, 0.15);
 	padding: var(--space-2xl);
-	border-radius: var(--radius-xl);
-	box-shadow: var(--shadow-xl);
+	border-radius: var(--radius-2xl);
+	box-shadow: var(--shadow-glow-hover);
 	max-width: 600px;
 	width: 90%;
 	max-height: 80vh;
