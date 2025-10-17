@@ -12,7 +12,7 @@ import npm from "../../assets/logo/npm.png";
 import bootstrap from "../../assets/logo/bootstrap.png";
 import supabase from "../../assets/logo/supabase.png";
 import tailwind from "../../assets/logo/tailwind-css.png";
-import sql from "../../assets/logo/sql.png";
+import sql from "../../assets/logo/Sql.png";
 import firebase from "../../assets/logo/firebase.png";
 import postman from "../../assets/logo/postman.png";
 import postgres from "../../assets/logo/postgres.png";
