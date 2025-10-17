@@ -69,8 +69,7 @@ const AboutMe = () => {
 							<div className='resume-title'>
 								<h3>Dustin J Beckford</h3>
 								<p>Full Stack Developer</p>
-								<div className='contact-info'>
-									<span>(470) 430-1200</span>
+								<div className='contact-info'>				
 									<span>dustin.beckford@gmail.com</span>
 									<span>Atlanta, GA</span>
 								</div>
