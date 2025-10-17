@@ -1,7 +1,10 @@
 {
-	"functions": {
-		"app/api/**/*.js": {
-			"runtime": "nodejs22.x"
+	"buildCommand": "cd new-portfolio && npm run build",
+	"outputDirectory": "new-portfolio/dist",
+	"rewrites": [
+		{
+			"source": "/(.*)",
+			"destination": "/index.html"
 		}
-	}
+	]
 }
