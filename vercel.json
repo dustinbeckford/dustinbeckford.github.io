@@ -1,0 +1,5 @@
+{
+	"installCommand": "cd new-portfolio && npm install",
+	"buildCommand": "cd new-portfolio && npm run build",
+	"outputDirectory": "new-portfolio/dist"
+}
