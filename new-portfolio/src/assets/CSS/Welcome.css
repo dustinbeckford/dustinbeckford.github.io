@@ -1,120 +1,345 @@
 /** @format */
 
-** @format */ .Welcome-Section {
+.Welcome-Section {
+	position: relative;
+	overflow: hidden;
 }
 
 .Welcome-content {
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	z-index: 2;
 }
+
 .welcome-container {
-	background-image: url("../images/cool-background.png"); /* Specify the path to your background image */
-	background-size: cover; /* Cover the entire container with the background image */
-	background-repeat: no-repeat; /* Prevent background image from repeating */
-	background-position: center; /* Center the background image */
-	height: 100vh; /* Set the height to 100% of the viewport height */
+	background-image: url("../images/cool-background.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #fff; /* Text color on top of the background */
-	width: auto;
+	color: var(--text-primary);
+	width: 100%;
+	position: relative;
+	animation: backgroundPulse 8s ease-in-out infinite;
 }
+
+.welcome-container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+		135deg,
+		rgba(0, 0, 0, 0.7) 0%,
+		rgba(0, 0, 0, 0.4) 50%,
+		rgba(0, 0, 0, 0.8) 100%
+	);
+	z-index: 1;
+	animation: overlayPulse 8s ease-in-out infinite;
+}
+
+.welcome-container::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+		45deg,
+		var(--accent-blue) 0%,
+		var(--accent-purple) 50%,
+		var(--accent-blue) 100%
+	);
+	opacity: 0.15;
+	z-index: 0;
+	animation: gradientShift 6s ease-in-out infinite;
+}
+
 .Welcome-Logos {
 	display: flex;
 	align-items: center;
-	gap: 16px;
+	gap: var(--space-lg);
+	margin-top: var(--space-2xl);
 }
+
 .Welcome {
 	display: inline-flex;
 	flex-direction: column;
-	font-size: clamp(
-		1.5rem,
-		0.285rem + 10.16vw,
-		3rem
-	); /* Adjusted font size for Welcome */
-	word-spacing: 1px;
-	background: linear-gradient(to right, black, white);
+	font-size: clamp(2rem, 4vw, 3.5rem);
+	font-weight: 700;
+	word-spacing: 0.05em;
+	background: linear-gradient(135deg, #ffffff, #f0f0f0);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: colorShift 5s linear infinite;
+	background-clip: text;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+	animation: gradientShift 6s ease-in-out infinite;
+	line-height: 1.1;
+	letter-spacing: -0.02em;
 }
 
 .Welcome-content h1 {
-	font-size: 3rem; /* Adjust the font size as needed */
-	color: #7e7a7a; /* Set the text color to a dark shade */
-	margin-bottom: 10px; /* Add some space below the heading */
+	font-size: clamp(3rem, 6vw, 5rem);
+	font-weight: 800;
+	color: #ffffff;
+	text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+	margin-bottom: var(--space-sm);
+	line-height: 1;
+	letter-spacing: -0.03em;
+	animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 .Description {
 	display: inline-flex;
 	flex-direction: column;
-	font-size: clamp(2.19rem, 0.285rem + 10.16vw, 5rem);
-	word-spacing: 1px;
-	background: linear-gradient(to right, black, white);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: colorShift 5s linear infinite;
-	margin-top: 20px; /* Adjusted margin-top for spacing between h1 and h2 */
+	font-size: clamp(1.5rem, 3vw, 2.5rem);
+	font-weight: 600;
+	word-spacing: 0.02em;
+	color: #ffffff;
+	text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+	margin-top: var(--space-md);
+	line-height: 1.2;
+	letter-spacing: -0.01em;
 }
 
-@keyframes colorShift {
+@keyframes gradientShift {
 	0% {
-		background-position: 0%;
+		background: linear-gradient(
+			45deg,
+			var(--accent-blue) 0%,
+			var(--accent-purple) 50%,
+			var(--accent-blue) 100%
+		);
+		opacity: 0.15;
+	}
+	25% {
+		background: linear-gradient(
+			45deg,
+			var(--accent-purple) 0%,
+			var(--accent-blue) 50%,
+			var(--accent-purple) 100%
+		);
+		opacity: 0.2;
 	}
 	50% {
-		background-position: 50%;
+		background: linear-gradient(
+			45deg,
+			var(--accent-purple) 0%,
+			var(--accent-blue) 50%,
+			var(--accent-purple) 100%
+		);
+		opacity: 0.15;
+	}
+	75% {
+		background: linear-gradient(
+			45deg,
+			var(--accent-blue) 0%,
+			var(--accent-purple) 50%,
+			var(--accent-blue) 100%
+		);
+		opacity: 0.2;
 	}
 	100% {
-		background-position: 100%;
+		background: linear-gradient(
+			45deg,
+			var(--accent-blue) 0%,
+			var(--accent-purple) 50%,
+			var(--accent-blue) 100%
+		);
+		opacity: 0.15;
 	}
 }
 
-.Welcome-Logos img {
-	box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-	transition: filter 0.3s ease 0s;
+@keyframes backgroundPulse {
+	0%, 100% {
+		background-size: 100% 100%;
+		opacity: 1;
+	}
+	50% {
+		background-size: 105% 105%;
+		opacity: 0.95;
+	}
 }
 
-.Welcome-Logos img:hover {
-	box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+@keyframes overlayPulse {
+	0%, 100% {
+		opacity: 0.8;
+		background: linear-gradient(
+			135deg,
+			rgba(0, 0, 0, 0.7) 0%,
+			rgba(0, 0, 0, 0.4) 50%,
+			rgba(0, 0, 0, 0.8) 100%
+		);
+	}
+	50% {
+		opacity: 0.6;
+		background: linear-gradient(
+			135deg,
+			rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0.2) 50%,
+			rgba(0, 0, 0, 0.6) 100%
+		);
+	}
+}
+
+@keyframes accentPulse {
+	0%, 100% {
+		opacity: 0.3;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.6;
+		transform: scale(1.1);
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInScale {
+	from {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.Welcome-Logos {
+	animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.Welcome-Logos a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	border-radius: var(--radius-lg);
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: var(--backdrop-blur-sm);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	transition: all var(--transition-normal);
+	position: relative;
+	overflow: hidden;
+}
+
+.Welcome-Logos a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+	transition: left var(--transition-slow);
+}
+
+.Welcome-Logos a:hover {
+	transform: translateY(-2px) scale(1.05);
+	background: rgba(135, 200, 255, 0.2);
+	border-color: var(--accent-blue);
+	box-shadow: var(--shadow-glow);
+}
+
+.Welcome-Logos a:hover::before {
+	left: 100%;
+}
+
+.Welcome-Logos a:active {
+	transform: translateY(-1px) scale(1.02);
 }
 
 .social-logos {
-	width: 40px;
+	width: 24px;
+	height: 24px;
+	transition: all var(--transition-normal);
+}
+
+.Welcome-Logos a:hover .social-logos {
+	transform: scale(1.1);
 }
 
 .Welcome-bigbox {
-	padding-bottom: 5rem;
+	padding-bottom: var(--space-3xl);
 }
 
 .Intro-Firstname {
-	color: white;
+	color: var(--text-primary);
+	animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 p {
-	color: whitesmoke;
+	color: var(--text-secondary);
+	animation: fadeInUp 1s ease-out 0.8s both;
 }
 
 /* Media Queries */
-
 @media only screen and (max-width: 768px) {
-	/* Adjust styles for smaller screens here */
 	.Welcome {
-		font-size: clamp(1.2rem, 5vw, 2rem);
+		font-size: clamp(1.5rem, 5vw, 2.5rem);
 	}
 
 	.Description {
-		font-size: clamp(1.5rem, 5vw, 3rem);
+		font-size: clamp(1.2rem, 4vw, 2rem);
 	}
 
 	.Welcome-content h1 {
-		font-size: 2rem;
+		font-size: clamp(2.5rem, 8vw, 4rem);
 	}
 
-	.Welcome-Logos img {
-		width: 30px;
+	.Welcome-Logos {
+		gap: var(--space-md);
+		margin-top: var(--space-xl);
+	}
+
+	.Welcome-Logos a {
+		width: 44px;
+		height: 44px;
+	}
+
+	.social-logos {
+		width: 20px;
+		height: 20px;
 	}
 
 	.Welcome-bigbox {
-		padding-bottom: 2rem;
+		padding-bottom: var(--space-2xl);
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.Welcome-Logos {
+		gap: var(--space-sm);
+	}
+
+	.Welcome-Logos a {
+		width: 40px;
+		height: 40px;
+	}
+
+	.social-logos {
+		width: 18px;
+		height: 18px;
 	}
 }

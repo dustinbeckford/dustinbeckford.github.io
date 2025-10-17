@@ -1,62 +1,396 @@
 /** @format */
 
 .skills-container {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	gap: var(--space-lg);
 	justify-content: center;
 	align-items: center;
-	padding: 20px;
+	padding: var(--space-3xl) var(--space-xl);
+	background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+	position: relative;
+	overflow: hidden;
+}
+
+.skills-container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
+	opacity: 0.6;
 }
 
 .logo-container {
-	flex: 0 0 calc(20% - 20px); /* Adjust the width as needed */
-	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: var(--space-lg);
+	background: rgba(28, 28, 30, 0.6);
+	backdrop-filter: var(--backdrop-blur-sm);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: var(--radius-lg);
+	transition: all var(--transition-normal);
+	position: relative;
 	overflow: hidden;
 	text-align: center;
+	min-height: 140px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.logo-container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(135, 200, 255, 0.1), transparent);
+	transition: left var(--transition-slow);
 }
 
 .logo-container:hover {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transform: translateY(-6px) scale(1.05);
+	background: rgba(28, 28, 30, 0.9);
+	border-color: var(--accent-blue);
+	box-shadow: 
+		var(--shadow-xl),
+		0 0 30px rgba(135, 200, 255, 0.3),
+		0 0 60px rgba(135, 200, 255, 0.1);
+}
+
+.logo-container:hover::before {
+	left: 100%;
+}
+
+.logo-container:active {
+	transform: translateY(-2px) scale(1.02);
+	transition: all 0.1s ease-out;
+}
+
+.logo-container:active .logo-image {
+	transform: scale(1.2) rotate(5deg);
+}
+
+.logo-container:active h4 {
+	color: var(--accent-blue);
+	transform: scale(1.1);
 }
 
 .logo-image {
-	width: 100%; /* Set the width to 100% to make the image responsive */
-	height: auto; /* Maintain the aspect ratio */
-	max-width: 100px; /* Limit the maximum width of the image */
-	max-height: 100px; /* Limit the maximum height of the image */
-	object-fit: cover;
-	filter: grayscale(100%);
-	transition: filter 0.3s ease-in-out;
+	width: 48px;
+	height: 48px;
+	object-fit: contain;
+	transition: all var(--transition-normal);
+	margin-bottom: var(--space-sm);
+	filter: grayscale(0%);
+	opacity: 0.9;
 }
 
 .logo-container:hover .logo-image {
-	filter: grayscale(0%);
+	transform: scale(1.15) rotate(2deg);
+	opacity: 1;
+	filter: brightness(1.2) saturate(1.1);
+}
+
+.logo-container:active .logo-image {
+	transform: scale(1.3) rotate(8deg);
+	filter: brightness(1.4) saturate(1.3);
+}
+
+.logo-container h4 {
+	color: var(--text-secondary);
+	font-size: 0.875rem;
+	font-weight: 500;
+	margin: 0;
+	transition: all var(--transition-normal);
+	letter-spacing: 0.01em;
+}
+
+.logo-container:hover h4 {
+	color: var(--text-primary);
+	transform: translateY(-2px);
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container:active h4 {
+	color: var(--accent-blue);
+	transform: translateY(-3px) scale(1.05);
+	text-shadow: 0 3px 6px rgba(135, 200, 255, 0.4);
 }
 
 .skills-container h1 {
 	text-align: center;
 	width: 100%;
+	grid-column: 1 / -1;
 }
 
 .skills {
-	font-size: 2rem;
-	color: #a19e9e;
-	margin-bottom: 20px;
-	display: inline-block;
-	border-bottom: 2px solid #87c8ff;
-	padding-bottom: 10px;
+	font-size: clamp(2rem, 4vw, 3rem);
+	font-weight: 700;
+	color: var(--text-primary);
+	margin-bottom: var(--space-2xl);
+	display: block;
+	position: relative;
+	padding-bottom: var(--space-md);
 	text-align: center;
+	animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.skills::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 3px;
+	background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
+	border-radius: var(--radius-full);
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 /* Media Queries */
-
 @media only screen and (max-width: 768px) {
-	/* Adjust styles for smaller screens here */
+	.skills-container {
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		gap: var(--space-md);
+		padding: var(--space-2xl) var(--space-lg);
+	}
+
 	.logo-container {
-		flex: 0 0 50%; /* Adjust the width of the logo container for smaller screens */
+		padding: var(--space-md);
+		min-height: 120px;
+	}
+
+	.logo-image {
+		width: 40px;
+		height: 40px;
+	}
+
+	.logo-container h4 {
+		font-size: 0.8rem;
 	}
 
 	.skills {
-		font-size: 1.5rem;
+		font-size: clamp(1.5rem, 5vw, 2.5rem);
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.skills-container {
+		grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+		gap: var(--space-sm);
+		padding: var(--space-xl) var(--space-md);
+	}
+
+	.logo-container {
+		padding: var(--space-sm);
+		min-height: 100px;
+	}
+
+	.logo-image {
+		width: 32px;
+		height: 32px;
+	}
+
+	.logo-container h4 {
+		font-size: 0.75rem;
+	}
+}
+
+/* Skill Modal Styles */
+.skill-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	animation: fadeIn var(--transition-normal) ease-out;
+}
+
+.skill-modal-content {
+	background: rgba(28, 28, 30, 0.95);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: var(--radius-lg);
+	padding: var(--space-lg);
+	max-width: 320px;
+	width: auto;
+	position: relative;
+	animation: modalSlideIn var(--transition-normal) ease-out;
+	box-shadow: var(--shadow-lg);
+}
+
+.skill-modal-header {
+	display: flex;
+	align-items: center;
+	gap: var(--space-sm);
+	margin-bottom: var(--space-md);
+	position: relative;
+}
+
+.skill-modal-logo {
+	width: 32px;
+	height: 32px;
+	object-fit: contain;
+	border-radius: var(--radius-sm);
+}
+
+.skill-modal-header h3 {
+	color: var(--text-primary);
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin: 0;
+	flex: 1;
+}
+
+.skill-modal-close {
+	position: absolute;
+	top: -var(--space-xs);
+	right: -var(--space-xs);
+	background: rgba(255, 255, 255, 0.1);
+	color: var(--text-secondary);
+	border: none;
+	border-radius: var(--radius-full);
+	width: 24px;
+	height: 24px;
+	font-size: 0.9rem;
+	font-weight: normal;
+	cursor: pointer;
+	transition: all var(--transition-normal);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.skill-modal-close:hover {
+	background: rgba(255, 255, 255, 0.2);
+	color: var(--text-primary);
+}
+
+.skill-modal-body {
+	color: var(--text-secondary);
+}
+
+.skill-description {
+	font-size: 0.85rem;
+	line-height: 1.4;
+	margin-bottom: var(--space-md);
+	color: var(--text-primary);
+}
+
+.skill-details {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+}
+
+.skill-detail-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--space-sm);
+}
+
+.skill-detail-label {
+	font-weight: 500;
+	color: var(--text-secondary);
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.skill-experience {
+	padding: 2px var(--space-xs);
+	border-radius: var(--radius-sm);
+	font-weight: 600;
+	font-size: 0.7rem;
+	text-align: center;
+	width: fit-content;
+}
+
+.skill-expert {
+	background: rgba(34, 197, 94, 0.2);
+	color: #22c55e;
+	border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.skill-advanced {
+	background: rgba(59, 130, 246, 0.2);
+	color: #3b82f6;
+	border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.skill-intermediate {
+	background: rgba(245, 158, 11, 0.2);
+	color: #f59e0b;
+	border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.skill-projects {
+	color: var(--text-secondary);
+	font-size: 0.75rem;
+	line-height: 1.3;
+	text-align: right;
+	max-width: 60%;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes modalSlideIn {
+	from {
+		opacity: 0;
+		transform: scale(0.9) translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+	.skill-modal-content {
+		padding: var(--space-md);
+		max-width: 280px;
+	}
+
+	.skill-modal-header h3 {
+		font-size: 1rem;
+	}
+
+	.skill-modal-logo {
+		width: 28px;
+		height: 28px;
+	}
+
+	.skill-description {
+		font-size: 0.8rem;
 	}
 }
