@@ -2,7 +2,7 @@
 
 import "../../assets/CSS/Skills.css";
 import React, { useState } from "react";
-import Javascript from "../../assets/logo/Javascript.png";
+import Javascript from "../../assets/logo/javascript.png";
 import react from "../../assets/logo/react.png";
 import css from "../../assets/logo/css3.png";
 import html from "../../assets/logo/html.png";
