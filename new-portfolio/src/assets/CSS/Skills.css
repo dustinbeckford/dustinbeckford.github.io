@@ -191,23 +191,28 @@
 
 @media only screen and (max-width: 480px) {
 	.skills-container {
-		grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+		grid-template-columns: repeat(2, 1fr);
 		gap: var(--space-sm);
 		padding: var(--space-xl) var(--space-md);
 	}
 
 	.logo-container {
 		padding: var(--space-sm);
-		min-height: 100px;
+		min-height: 80px;
 	}
 
 	.logo-image {
-		width: 32px;
-		height: 32px;
+		width: 24px;
+		height: 24px;
 	}
 
 	.logo-container h4 {
-		font-size: 0.75rem;
+		font-size: 0.7rem;
+	}
+
+	.skills {
+		font-size: clamp(1.25rem, 6vw, 2rem);
+		margin-bottom: var(--space-lg);
 	}
 }
 

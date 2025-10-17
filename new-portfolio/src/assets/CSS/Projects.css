@@ -377,6 +377,10 @@
 }
 
 @media only screen and (max-width: 480px) {
+	.projects-container {
+		padding: var(--space-lg) var(--space-md);
+	}
+
 	.projects-wrapper {
 		grid-template-columns: 1fr;
 		gap: var(--space-md);
@@ -384,6 +388,17 @@
 
 	.project-image {
 		height: 160px;
+	}
+
+	.project-name {
+		font-size: 1.1rem;
+		margin: var(--space-md) var(--space-md) var(--space-sm);
+	}
+
+	.modal-content {
+		width: 98%;
+		max-height: 95vh;
+		margin: 1rem;
 	}
 
 	.modal-header {
@@ -404,5 +419,10 @@
 	
 	.project-description {
 		font-size: 0.9rem;
+	}
+
+	.Projects {
+		font-size: clamp(1.25rem, 6vw, 2rem);
+		margin-bottom: var(--space-lg);
 	}
 }

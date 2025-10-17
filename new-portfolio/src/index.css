@@ -214,6 +214,44 @@ p {
 	transform: translateX(0);
 }
 
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+	body {
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+	h1 {
+		font-size: clamp(1.75rem, 6vw, 2.5rem);
+	}
+
+	h2 {
+		font-size: clamp(1.5rem, 5vw, 2rem);
+	}
+
+	h3 {
+		font-size: clamp(1.25rem, 4vw, 1.5rem);
+	}
+}
+
+@media (max-width: 480px) {
+	body {
+		font-size: 13px;
+	}
+
+	h1 {
+		font-size: clamp(1.5rem, 7vw, 2rem);
+	}
+
+	h2 {
+		font-size: clamp(1.25rem, 6vw, 1.75rem);
+	}
+
+	h3 {
+		font-size: clamp(1.1rem, 5vw, 1.25rem);
+	}
+}
+
 /* Stagger animation for grid items */
 .scroll-stagger {
 	opacity: 0;
