@@ -5,7 +5,7 @@ import "../../assets/CSS/Projects.css";
 import CarSearchImage from "../../assets/images/CarSearch.png";
 import GamerNetImage from "../../assets/images/GameNet.png";
 import CarEventImage from "../../assets/images/CarEvent.png";
-
+import ZealAutomotiveImage from "../../assets/images/zealautomotive.png";
 const Projects = () => {
 	const projectsData = [
 		{
@@ -31,6 +31,14 @@ const Projects = () => {
 			link: "https://github.com/August-2023-Capstone/Capstone/tree/main",
 			demoLink: "https://youtu.be/UPQ1Q1FtLTs",
 			image: GamerNetImage,
+		},
+		{
+			name: "Zeal Automotive",
+			description:
+				"Designing and developing a responsive website for an automotive repair and performance shop. This website includes a home page, services page, about page, and contact page. The website is built with React and styled with Tailwind CSS.",
+			link: "https://github.com/downtownadambrown/zeal-automotive",
+			demoLink: "https://www.zealautomotive.com/",
+			image: ZealAutomotiveImage,
 		},
 	];
 
@@ -63,12 +71,20 @@ const Projects = () => {
 					<div className='modal-container' onClick={() => handleModal(null)}>
 						<div className='modal-content' onClick={(e) => e.stopPropagation()}>
 							<button className='modal-close' onClick={() => handleModal(null)}>
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-									<line x1="18" y1="6" x2="6" y2="18"></line>
-									<line x1="6" y1="6" x2="18" y2="18"></line>
+								<svg
+									width='16'
+									height='16'
+									viewBox='0 0 24 24'
+									fill='none'
+									stroke='currentColor'
+									strokeWidth='2'
+									strokeLinecap='round'
+									strokeLinejoin='round'>
+									<line x1='18' y1='6' x2='6' y2='18'></line>
+									<line x1='6' y1='6' x2='18' y2='18'></line>
 								</svg>
 							</button>
-							
+
 							<div className='modal-header'>
 								<div className='project-image-modal'>
 									<img src={selectedProject.image} alt={selectedProject.name} />
@@ -83,21 +99,47 @@ const Projects = () => {
 									</div>
 								</div>
 							</div>
-							
+
 							<div className='modal-body'>
-								<p className='project-description'>{selectedProject.description}</p>
+								<p className='project-description'>
+									{selectedProject.description}
+								</p>
 							</div>
-							
+
 							<div className='modal-actions'>
-								<a href={selectedProject.link} className='action-button primary' target="_blank" rel="noopener noreferrer">
-									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-										<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+								<a
+									href={selectedProject.link}
+									className='action-button primary'
+									target='_blank'
+									rel='noopener noreferrer'>
+									<svg
+										width='16'
+										height='16'
+										viewBox='0 0 24 24'
+										fill='none'
+										stroke='currentColor'
+										strokeWidth='2'
+										strokeLinecap='round'
+										strokeLinejoin='round'>
+										<path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'></path>
 									</svg>
 									View Code
 								</a>
-								<a href={selectedProject.demoLink} className='action-button secondary' target="_blank" rel="noopener noreferrer">
-									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-										<polygon points="5,3 19,12 5,21"></polygon>
+								<a
+									href={selectedProject.demoLink}
+									className='action-button secondary'
+									target='_blank'
+									rel='noopener noreferrer'>
+									<svg
+										width='16'
+										height='16'
+										viewBox='0 0 24 24'
+										fill='none'
+										stroke='currentColor'
+										strokeWidth='2'
+										strokeLinecap='round'
+										strokeLinejoin='round'>
+										<polygon points='5,3 19,12 5,21'></polygon>
 									</svg>
 									Live Demo
 								</a>
