@@ -22,6 +22,7 @@ import cursor from "../../assets/logo/cursor.svg";
 function Skills() {
 	const [selectedSkill, setSelectedSkill] = useState(null);
 	const [showModal, setShowModal] = useState(false);
+	const [clickedSkills, setClickedSkills] = useState(new Set());
 
 	const skillsData = {
 		"Frontend Development": [
@@ -206,11 +207,19 @@ function Skills() {
 	const handleSkillClick = (skill) => {
 		setSelectedSkill(skill);
 		setShowModal(true);
+		setClickedSkills((prev) => new Set([...prev, skill.name]));
 	};
 
 	const closeModal = () => {
 		setShowModal(false);
 		setSelectedSkill(null);
+		if (selectedSkill) {
+			setClickedSkills((prev) => {
+				const newSet = new Set(prev);
+				newSet.delete(selectedSkill.name);
+				return newSet;
+			});
+		}
 	};
 	return (
 		<div className='fade-in'>
@@ -223,7 +232,9 @@ function Skills() {
 							{skills.map((skill, index) => (
 								<div
 									key={index}
-									className='logo-container'
+									className={`logo-container ${
+										clickedSkills.has(skill.name) ? "clicked" : ""
+									}`}
 									onClick={() => handleSkillClick(skill)}>
 									<img
 										src={skill.image}
