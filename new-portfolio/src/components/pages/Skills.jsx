@@ -23,157 +23,185 @@ function Skills() {
 	const [selectedSkill, setSelectedSkill] = useState(null);
 	const [showModal, setShowModal] = useState(false);
 
-	const skillsData = [
-		{
-			name: "React",
-			image: react,
-			description:
-				"A powerful JavaScript library for building user interfaces with component-based architecture, virtual DOM, and efficient state management.",
-			experience: "Advanced",
-			projects: "Multiple portfolio projects, dynamic web applications",
-		},
-		{
-			name: "JavaScript",
-			image: Javascript,
-			description:
-				"The core programming language of the web, enabling dynamic and interactive user experiences with ES6+ features and modern syntax.",
-			experience: "Expert",
-			projects: "Full-stack applications, API integrations, DOM manipulation",
-		},
-		{
-			name: "Redux",
-			image: Redux,
-			description:
-				"Predictable state container for JavaScript apps, providing centralized state management for complex React applications.",
-			experience: "Intermediate",
-			projects: "State management, data flow optimization",
-		},
-		{
-			name: "CSS",
-			image: css,
-			description:
-				"Styling language for web design, creating responsive layouts, animations, and modern UI components with advanced selectors.",
-			experience: "Expert",
-			projects: "Responsive designs, custom animations, modern layouts",
-		},
-		{
-			name: "HTML",
-			image: html,
-			description:
-				"The foundation of web development, creating semantic and accessible markup for modern web applications.",
-			experience: "Expert",
-			projects: "Semantic markup, accessibility compliance, SEO optimization",
-		},
-		{
-			name: "Git",
-			image: git,
-			description:
-				"Distributed version control system for tracking changes, collaborating on code, and managing project history.",
-			experience: "Advanced",
-			projects:
-				"Version control, branching strategies, collaborative development",
-		},
-		{
-			name: "GitHub",
-			image: github,
-			description:
-				"Cloud-based platform for Git repositories, enabling collaboration, code review, and project management.",
-			experience: "Advanced",
-			projects: "Repository management, CI/CD, open source contributions",
-		},
-		{
-			name: "NPM",
-			image: npm,
-			description:
-				"Package manager for JavaScript, managing dependencies and scripts for Node.js projects and web applications.",
-			experience: "Advanced",
-			projects: "Dependency management, package publishing, build automation",
-		},
-		{
-			name: "Bootstrap",
-			image: bootstrap,
-			description:
-				"Popular CSS framework providing pre-built components and responsive grid system for rapid development.",
-			experience: "Advanced",
-			projects: "Rapid prototyping, responsive layouts, component libraries",
-		},
-		{
-			name: "Tailwind CSS",
-			image: tailwind,
-			description:
-				"Utility-first CSS framework for rapid UI development with customizable design systems and responsive utilities.",
-			experience: "Intermediate",
-			projects: "Modern UI components, design systems, rapid development",
-		},
-		{
-			name: "Firebase",
-			image: firebase,
-			description:
-				"Google's platform for building web and mobile applications with authentication, database, and hosting services.",
-			experience: "Intermediate",
-			projects: "Real-time databases, user authentication, cloud hosting",
-		},
-		{
-			name: "Supabase",
-			image: supabase,
-			description:
-				"Open source Firebase alternative providing PostgreSQL database, authentication, and real-time subscriptions.",
-			experience: "Intermediate",
-			projects:
-				"Backend-as-a-Service, real-time features, PostgreSQL integration",
-		},
-		{
-			name: "SQL",
-			image: sql,
-			description:
-				"Structured Query Language for managing and manipulating relational databases with complex queries and data analysis.",
-			experience: "Advanced",
-			projects: "Database design, query optimization, data analysis",
-		},
-		{
-			name: "Postman",
-			image: postman,
-			description:
-				"API development and testing platform for designing, testing, and documenting RESTful APIs and web services.",
-			experience: "Advanced",
-			projects: "API testing, documentation, automated testing workflows",
-		},
-		{
-			name: "PostgreSQL",
-			image: postgres,
-			description:
-				"Advanced open-source relational database system with ACID compliance, extensibility, and robust data integrity.",
-			experience: "Intermediate",
-			projects: "Database administration, complex queries, data modeling",
-		},
-		{
-			name: "AI Assistant",
-			image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
-			description:
-				"Collaborative AI development partner for code generation, debugging, architecture planning, and modern development workflows.",
-			experience: "Expert",
-			projects:
-				"Portfolio development, code optimization, technical documentation",
-		},
-		{
-			name: "VS Code",
-			image:
-				"https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
-			description:
-				"Microsoft's powerful code editor with extensive extensions, integrated debugging, Git support, and customizable workspace for modern development.",
-			experience: "Expert",
-			projects: "Full-stack development, debugging, extension ecosystem",
-		},
-		{
-			name: "Cursor",
-			image: cursor,
-			description:
-				"AI-powered code editor built on VS Code with integrated AI assistance, intelligent code completion, and modern development workflows.",
-			experience: "Advanced",
-			projects:
-				"AI-assisted coding, rapid prototyping, intelligent development",
-		},
-	];
+	const skillsData = {
+		"Frontend Development": [
+			{
+				name: "React",
+				image: react,
+				description:
+					"A powerful JavaScript library for building user interfaces with component-based architecture, virtual DOM, and efficient state management.",
+				experience: "Advanced",
+				projects: "Multiple portfolio projects, dynamic web applications",
+			},
+			{
+				name: "JavaScript",
+				image: Javascript,
+				description:
+					"The core programming language of the web, enabling dynamic and interactive user experiences with ES6+ features and modern syntax.",
+				experience: "Expert",
+				projects: "Full-stack applications, API integrations, DOM manipulation",
+			},
+			{
+				name: "Redux",
+				image: Redux,
+				description:
+					"Predictable state container for JavaScript apps, providing centralized state management for complex React applications.",
+				experience: "Intermediate",
+				projects: "State management, data flow optimization",
+			},
+			{
+				name: "CSS",
+				image: css,
+				description:
+					"Styling language for web design, creating responsive layouts, animations, and modern UI components with advanced selectors.",
+				experience: "Expert",
+				projects: "Responsive designs, custom animations, modern layouts",
+			},
+			{
+				name: "HTML",
+				image: html,
+				description:
+					"The foundation of web development, creating semantic and accessible markup for modern web applications.",
+				experience: "Expert",
+				projects: "Semantic markup, accessibility compliance, SEO optimization",
+			},
+			{
+				name: "Bootstrap",
+				image: bootstrap,
+				description:
+					"Popular CSS framework providing pre-built components and responsive grid system for rapid development.",
+				experience: "Advanced",
+				projects: "Rapid prototyping, responsive layouts, component libraries",
+			},
+			{
+				name: "Tailwind CSS",
+				image: tailwind,
+				description:
+					"Utility-first CSS framework for rapid UI development with customizable design systems and responsive utilities.",
+				experience: "Intermediate",
+				projects: "Modern UI components, design systems, rapid development",
+			},
+			{
+				name: "EJS",
+				image:
+					"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzAwRjAwMCIvPgo8dGV4dCB4PSIyMCIgeT0iMjYiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjRkYwMEZGIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4lPSBFSlMgJT08L3RleHQ+Cjwvc3ZnPgo=",
+				description:
+					"Embedded JavaScript templating engine for generating HTML markup with JavaScript, enabling dynamic content rendering on the server side.",
+				experience: "Intermediate",
+				projects:
+					"Server-side rendering, dynamic web pages, template-based applications",
+			},
+		],
+		"Backend & Database": [
+			{
+				name: "Node.js",
+				image:
+					"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+				description:
+					"JavaScript runtime built on Chrome's V8 engine for building scalable network applications and server-side development.",
+				experience: "Advanced",
+				projects:
+					"RESTful APIs, server-side applications, real-time applications",
+			},
+			{
+				name: "Firebase",
+				image: firebase,
+				description:
+					"Google's platform for building web and mobile applications with authentication, database, and hosting services.",
+				experience: "Intermediate",
+				projects: "Real-time databases, user authentication, cloud hosting",
+			},
+			{
+				name: "Supabase",
+				image: supabase,
+				description:
+					"Open source Firebase alternative providing PostgreSQL database, authentication, and real-time subscriptions.",
+				experience: "Intermediate",
+				projects:
+					"Backend-as-a-Service, real-time features, PostgreSQL integration",
+			},
+			{
+				name: "SQL",
+				image: sql,
+				description:
+					"Structured Query Language for managing and manipulating relational databases with complex queries and data analysis.",
+				experience: "Advanced",
+				projects: "Database design, query optimization, data analysis",
+			},
+			{
+				name: "PostgreSQL",
+				image: postgres,
+				description:
+					"Advanced open-source relational database system with ACID compliance, extensibility, and robust data integrity.",
+				experience: "Intermediate",
+				projects: "Database administration, complex queries, data modeling",
+			},
+		],
+		"Development Tools": [
+			{
+				name: "Git",
+				image: git,
+				description:
+					"Distributed version control system for tracking changes, collaborating on code, and managing project history.",
+				experience: "Advanced",
+				projects:
+					"Version control, branching strategies, collaborative development",
+			},
+			{
+				name: "GitHub",
+				image: github,
+				description:
+					"Cloud-based platform for Git repositories, enabling collaboration, code review, and project management.",
+				experience: "Advanced",
+				projects: "Repository management, CI/CD, open source contributions",
+			},
+			{
+				name: "NPM",
+				image: npm,
+				description:
+					"Package manager for JavaScript, managing dependencies and scripts for Node.js projects and web applications.",
+				experience: "Advanced",
+				projects: "Dependency management, package publishing, build automation",
+			},
+			{
+				name: "Postman",
+				image: postman,
+				description:
+					"API development and testing platform for designing, testing, and documenting RESTful APIs and web services.",
+				experience: "Advanced",
+				projects: "API testing, documentation, automated testing workflows",
+			},
+		],
+		"Development Environment": [
+			{
+				name: "VS Code",
+				image:
+					"https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
+				description:
+					"Microsoft's powerful code editor with extensive extensions, integrated debugging, Git support, and customizable workspace for modern development.",
+				experience: "Expert",
+				projects: "Full-stack development, debugging, extension ecosystem",
+			},
+			{
+				name: "Cursor",
+				image: cursor,
+				description:
+					"AI-powered code editor built on VS Code with integrated AI assistance, intelligent code completion, and modern development workflows.",
+				experience: "Advanced",
+				projects:
+					"AI-assisted coding, rapid prototyping, intelligent development",
+			},
+			{
+				name: "AI Assistant",
+				image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+				description:
+					"Collaborative AI development partner for code generation, debugging, architecture planning, and modern development workflows.",
+				experience: "Expert",
+				projects:
+					"Portfolio development, code optimization, technical documentation",
+			},
+		],
+	};
 
 	const handleSkillClick = (skill) => {
 		setSelectedSkill(skill);
@@ -187,18 +215,25 @@ function Skills() {
 	return (
 		<div className='fade-in'>
 			<span className='skills'>Skills</span>
-			<div className='skills-container fade-in-stagger'>
-				{skillsData.map((skill, index) => (
-					<div
-						key={index}
-						className='logo-container'
-						onClick={() => handleSkillClick(skill)}>
-						<img
-							src={skill.image}
-							alt={`${skill.name} Logo`}
-							className='logo-image'
-						/>
-						<h4>{skill.name}</h4>
+			<div className='skills-wrapper'>
+				{Object.entries(skillsData).map(([category, skills]) => (
+					<div key={category} className='skill-category'>
+						<h3 className='category-title'>{category}</h3>
+						<div className='skills-container fade-in-stagger'>
+							{skills.map((skill, index) => (
+								<div
+									key={index}
+									className='logo-container'
+									onClick={() => handleSkillClick(skill)}>
+									<img
+										src={skill.image}
+										alt={`${skill.name} Logo`}
+										className='logo-image'
+									/>
+									<h4>{skill.name}</h4>
+								</div>
+							))}
+						</div>
 					</div>
 				))}
 			</div>
