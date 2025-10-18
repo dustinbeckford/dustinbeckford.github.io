@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dustin J Beckford - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #4A90E2;
+            padding-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 1.3rem;
+            color: #4A90E2;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4A90E2;
+            padding-bottom: 5px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4A90E2;
+        }
+        
+        .skill-category strong {
+            color: #4A90E2;
+            font-weight: 600;
+        }
+        
+        .experience-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #4A90E2;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .company {
+            color: #4A90E2;
+            font-weight: 600;
+        }
+        
+        .duration {
+            color: #666;
+            font-size: 0.9rem;
+            background: #e9ecef;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+        
+        .projects-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .project-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4A90E2;
+        }
+        
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .project-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .education {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4A90E2;
+        }
+        
+        .education-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .education-details {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .certification {
+            color: #4A90E2;
+            font-weight: 600;
+        }
+        
+        @media print {
+            body {
+                font-size: 12px;
+            }
+            .container {
+                padding: 20px;
+            }
+            .name {
+                font-size: 2rem;
+            }
+            .title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="name">Dustin J Beckford</h1>
+            <p class="title">Full Stack Developer</p>
+            <div class="contact">
+                <span>(470) 430-1200</span>
+                <span>dustin.beckford@gmail.com</span>
+                <span>Atlanta, GA</span>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Frontend:</strong> React, JavaScript, TypeScript, HTML, CSS, Tailwind, Bootstrap
+                </div>
+                <div class="skill-category">
+                    <strong>Backend:</strong> Python, Express, Node, PostgreSQL, SQL, ElephantSQL, Supabase
+                </div>
+                <div class="skill-category">
+                    <strong>Tools:</strong> Visual Studio Code, Git, GitHub, Postman, API Testing, AI Development
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Software Developer</div>
+                        <div class="company">Digital Crafts</div>
+                    </div>
+                    <div class="duration">April 2023 - August 2023</div>
+                </div>
+                <p>Intensive 3-month software development program with 70 hours weekly commitment. Developed full-stack applications using modern technologies including React, Node.js, PostgreSQL, and various frontend frameworks.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Technical Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-title">Car Search Index</div>
+                    <div class="project-description">Frontend application utilizing CSS, HTML, Bootstrap, and JavaScript to connect API from database to frontend. Created comprehensive vehicle information system to help users make informed decisions when purchasing vehicles.</div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Event Hosting Platform</div>
+                    <div class="project-description">Backend system built with Node.js, Express.js, EJS, HTML/CSS, and JavaScript. Implemented participant management, car profiles, event listings, scheduling, sponsorship management, and real-time updates.</div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">E-Sports Website</div>
+                    <div class="project-description">Full-stack gaming platform developed with HTML, CSS, Tailwind, JavaScript, React, Redux, and Supabase Database with authentication. Enables gamers to connect, play, and schedule games seamlessly.</div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Portfolio Website</div>
+                    <div class="project-description">Full-stack portfolio project using React, Vite, Styled Components, FontAwesome, React Icons, React Router DOM, React Responsive Carousel, and ParticlesJS. Backend integration with Firebase and development tools including ESLint and TypeScript.</div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Zeal Automotive</div>
+                    <div class="project-description">Mobile-responsive website for automotive repair and performance shop. Built with React, Vite, Styled Components, and Firebase backend integration.</div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-title">Pokedex App</div>
+                    <div class="project-description">React.js application with React Router for navigation and Pokedex Promise v2 for data fetching. Demonstrates proficiency in frontend development and API integration.</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education">
+                <div class="education-title">Digital Crafts Web Development Bootcamp</div>
+                <div class="education-details">April 2023 - August 2023</div>
+                <div class="certification">Certificate of Completion - Full-Stack JavaScript Web Development Immersive</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
